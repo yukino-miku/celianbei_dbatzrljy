@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *.pyd
+*.egg-info/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -34,5 +35,12 @@ data/interim/*
 !data/interim/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
+!data/processed/question1/
+!data/processed/question1/cleaned_cycle_data.csv
 outputs/*
 !outputs/.gitkeep
+!outputs/question1/
+!outputs/question1/README.md
+!outputs/question1/manifest.json
+!outputs/question1/tables/
+!outputs/question1/tables/*.csv

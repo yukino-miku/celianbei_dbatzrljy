@@ -1,0 +1,4 @@
+﻿battery_id,cycle,strategy,capacity_raw,capacity_clean,SOH_raw,SOH_clean,SOH_smooth_official,SOH_smooth_robust,IR_raw,IR_clean,flag_soh_capacity_outlier,flag_ir_invalid,flag_temperature_invalid,flag_chargetime_invalid
+1,12,3_6C-80PER_3_6C,1.5390544,1.07430415,1.437442724,1.003376283,1.090373602,1.003811472,0.018950272,0.018950272,True,False,False,False
+2,12,3_6C-80PER_3_6C,1.0845895,1.0845895,1,1,0.9960385012,0.9957265245,0,0.0168692075,False,True,False,False
+3,12,3_6C-80PER_3_6C,1.0880535,1.0880535,1,1,0.9965638776,0.9963716262,0,0.0166834345,False,True,False,False
