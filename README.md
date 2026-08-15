@@ -2,7 +2,7 @@
 
 2026 年“策联杯”数学建模精英联赛 A 题项目：锂离子电池快充策略、SOH 退化与循环寿命估计。
 
-当前已完成问题一至问题四。问题三使用 40 块训练电池做严格 leave-one-battery-out 伪测试；问题四在 dataset 3 / NEWSTRUCTURE 的实验参数凸包和局部信任域内，建立充电时间—早期退化代理并给出模型 Pareto 推荐。
+当前已完成问题一至问题四及国赛式 LaTeX 论文初稿。问题三使用 40 块训练电池做严格 leave-one-battery-out 伪测试；问题四在 dataset 3 / NEWSTRUCTURE 的实验参数凸包和局部信任域内，建立充电时间—早期退化代理并给出模型 Pareto 推荐。论文摘要独占首页，正文与参考文献共 17 页，附录包含支撑材料清单、复现命令和完整源程序。
 
 ## 问题一口径
 
@@ -45,7 +45,9 @@ celianbei_dbatzrljy/
 ├─ figures/question1/         # 问题一 PNG 与 SVG 候选图
 ├─ figures/question2/         # 问题二 PNG 与 SVG 候选图
 ├─ figures/question3/         # 问题三 PNG 与 SVG 候选图
-└─ figures/question4/         # 问题四 PNG 与 SVG 候选图
+├─ figures/question4/         # 问题四 PNG 与 SVG 候选图
+├─ paper/                     # LaTeX 论文源稿与编译说明
+└─ output/pdf/                # 最终论文 PDF
 ```
 
 ## 重要说明
