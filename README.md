@@ -2,7 +2,7 @@
 
 2026 年“策联杯”数学建模精英联赛 A 题项目：锂离子电池快充策略、SOH 退化与循环寿命估计。
 
-当前已完成问题一，以及问题二的策略差异检验、充电参数关系、共线性诊断、SOC 加权应力指标、批次敏感性与稳健性分析。所有问题二结果继续复用问题一的清洗数据、稳健 SOH、早期特征和 quadratic EOL，不另建矛盾口径。
+当前已完成问题一至问题三。问题三使用 40 块训练电池做严格 leave-one-battery-out 伪测试，只用 9 块测试电池的 cycle 1–150 预测 151–200，并在短期预测后按问题一 constrained quadratic 口径给出条件性 EOL 估计。
 
 ## 问题一口径
 
@@ -20,10 +20,11 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e .
 .\.venv\Scripts\python.exe scripts\run_question1.py --bootstrap-samples 300
 .\.venv\Scripts\python.exe scripts\run_question2.py
+.\.venv\Scripts\python.exe scripts\run_question3.py
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-问题二完整运行生成 19 张结果表、15 张 320 dpi PNG 和对应 SVG；随机过程使用固定种子，输出清单见 `outputs/question2/manifest.json`。
+问题三完整运行生成 18 张结果表、13 张 320 dpi PNG 和对应 SVG；随机过程使用固定种子，输出清单见 `outputs/question3/manifest.json`。
 
 ## 目录
 
@@ -38,10 +39,12 @@ celianbei_dbatzrljy/
 ├─ tests/                     # 数据完整性及问题一、问题二关键逻辑测试
 ├─ outputs/question1/tables/  # 问题一结果表
 ├─ outputs/question2/tables/  # 问题二结果表
+├─ outputs/question3/tables/  # 问题三伪测试、测试预测和EOL结果
 ├─ figures/question1/         # 问题一 PNG 与 SVG 候选图
-└─ figures/question2/         # 问题二 PNG 与 SVG 候选图
+├─ figures/question2/         # 问题二 PNG 与 SVG 候选图
+└─ figures/question3/         # 问题三 PNG 与 SVG 候选图
 ```
 
 ## 重要说明
 
-问题一的长期寿命均为远距离外推结果。问题二把 quadratic EOL 与 SOH200、50–200 次稳健斜率交叉核验；`strategy` 与 `dataset_id/NEWSTRUCTURE` 又存在混杂。因此全部参数结论是观察性关系，不作严格因果解释。
+问题三的 151–200 预测可用训练电池真实未来严格验证；80% SOH 寿命没有真实标签，只能根据截断稳定性、重采样区间和候选模型分歧评估。测试 EOL 不是精确真值。

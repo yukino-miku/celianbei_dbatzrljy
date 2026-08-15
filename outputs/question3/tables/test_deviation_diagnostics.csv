@@ -1,0 +1,10 @@
+﻿battery_id,strategy,strategy_code,deviation_score,deviation_flag,template_similarity_factor,strategy_lobo_pointwise_rmse,short_horizon_reliability,short_horizon_reliability_reason
+2,3_6C-80PER_3_6C,S1,2.2950109359423205,marked_deviation,0.3735450433341756,0.002068585951120335,lower,marked peer deviation or difficult strategy in LOBO validation
+5,80PER_3_6C,S2,2.687778979420044,marked_deviation,0.25983488800440585,0.0009187310266250574,lower,marked peer deviation or difficult strategy in LOBO validation
+9,4_8C_80PER_4_8C,S3,1.2245216517683986,within_group,0.9520092407239674,0.0010854248535679698,lower,marked peer deviation or difficult strategy in LOBO validation
+10,5C_67PER_4C_NEWSTRUCTURE,S4,0.22113446755508834,within_group,1.0,0.00024321319114895066,relatively_high,within peer group and low strategy-level LOBO error
+11,5_3C_54PER_4C_NEWSTRUCTURE,S5,0.36758450863637715,within_group,1.0,0.0001848202955942246,relatively_high,within peer group and low strategy-level LOBO error
+14,5_6C_19PER_4_6C_NEWSTRUCTURE,S6,0.4377419490257922,within_group,1.0,0.00014952137533927085,relatively_high,within peer group and low strategy-level LOBO error
+16,3_7C_31PER_5_9C_NEWSTRUCTURE,S8,1.1310825322043574,within_group,0.9831076251814304,0.00037847018656512506,relatively_high,within peer group and low strategy-level LOBO error
+24,5_6C_36PER_4_3C_NEWSTRUCTURE,S7,0.4581428392104698,within_group,1.0,0.00016741728734480802,relatively_high,within peer group and low strategy-level LOBO error
+25,4_8C_80PER_4_8C_NEWSTRUCTURE,S9,4.380170495619909,marked_deviation,0.08047931821181925,0.0004868758669728494,lower,marked peer deviation or difficult strategy in LOBO validation

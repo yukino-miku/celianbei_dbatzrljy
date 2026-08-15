@@ -49,3 +49,8 @@ outputs/*
 !outputs/question2/manifest.json
 !outputs/question2/tables/
 !outputs/question2/tables/*.csv
+!outputs/question3/
+!outputs/question3/README.md
+!outputs/question3/manifest.json
+!outputs/question3/tables/
+!outputs/question3/tables/*.csv

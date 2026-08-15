@@ -1,0 +1,2 @@
+﻿method,nominal_coverage,mean_battery_coverage,median_battery_coverage,worst_battery_coverage,mean_half_width,note
+leave-one-battery-out horizon-wise absolute-error quantile,0.95,0.959,1.0,0.48,0.0011642759997125627,test intervals additionally include ensemble-model disagreement
