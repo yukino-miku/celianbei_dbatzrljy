@@ -1,0 +1,57 @@
+{
+  "question": 2,
+  "source": "question-one validated outputs; no cleaning logic rerun or altered",
+  "n_training_batteries": 40,
+  "n_strategies": 9,
+  "n_parameterized_strategies": 8,
+  "excluded_from_parameter_regression": [
+    "S2"
+  ],
+  "selected_shared_stress_exponent_p": 3.0,
+  "permutation_samples": 19999,
+  "association_bootstrap_samples": 2000,
+  "grouped_bootstrap_samples": 1000,
+  "table_files": [
+    "tables/battery_analysis_data.csv",
+    "tables/strategy_analysis_data.csv",
+    "tables/strategy_robust_summary.csv",
+    "tables/strategy_difference_tests.csv",
+    "tables/pairwise_strategy_tests.csv",
+    "tables/collinearity_diagnostics.csv",
+    "tables/parameter_correlations.csv",
+    "tables/parameter_ols_results.csv",
+    "tables/ridge_parameter_results.csv",
+    "tables/stress_p_search.csv",
+    "tables/stress_model_results.csv",
+    "tables/parameter_model_comparison.csv",
+    "tables/grouped_bootstrap_coefficients.csv",
+    "tables/grouped_bootstrap_summary.csv",
+    "tables/univariate_associations.csv",
+    "tables/cross_metric_conclusion_matrix.csv",
+    "tables/batch_sensitivity_coefficients.csv",
+    "tables/s8_diagnostic.csv",
+    "tables/hypothesis_checks.csv"
+  ],
+  "figure_stems_png_and_svg": [
+    "q2_01_strategy_primary_distributions",
+    "q2_02_chargetime_degradation_relations",
+    "q2_03_parameter_response_scatter",
+    "q2_04_parameter_collinearity",
+    "q2_05_stress_primary_relations",
+    "q2_06_stress_exponent_selection",
+    "q2_07_batch_sensitivity_stress",
+    "q2_08_grouped_bootstrap_coefficients",
+    "q2_09_strategy_standardized_heatmap",
+    "q2_10_parameter_model_comparison",
+    "q2_11_dataset3_local_soh200_surface",
+    "q2_12_s8_rank_profile",
+    "q2_13_pairwise_soh200_effects",
+    "q2_14_strategy_curvature",
+    "q2_15_full_vs_dataset3_parameter_coefficients"
+  ],
+  "limitations": [
+    "strategy is partly confounded with dataset_id/NEWSTRUCTURE",
+    "only 8 parameterized strategy combinations and 6 within dataset 3",
+    "quadratic EOL is a model-based extrapolation and is triangulated with SOH200 and slope"
+  ]
+}

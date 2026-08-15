@@ -1,0 +1,5 @@
+﻿predictor,rho_harm_SOH200,rho_harm_slope,rho_harm_eol,observed_metric_support_count_p_lt_0_10,eol_support_p_lt_0_10,minimum_bootstrap_same_sign_fraction,classification,interpretation_scope
+C1,0.16868694244915797,0.10844160586017297,-0.22893227903814295,0,False,0.571,mixed_or_weak,observational association; parameters are collinear and batch-confounded
+Q1,-0.5611425419454065,-0.5611425419454065,-0.1951800145897066,0,False,0.6459689534301453,directionally_consistent_but_limited,observational association; parameters are collinear and batch-confounded
+C2,0.6988459044322258,0.5663061639364588,0.3494229522161129,1,False,0.787,directionally_consistent_but_limited,observational association; parameters are collinear and batch-confounded
+soc_weighted_stress,0.5868368683374968,0.5509080804800991,0.05988131309566294,0,False,0.551,directionally_consistent_but_limited,observational association; parameters are collinear and batch-confounded

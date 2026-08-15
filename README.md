@@ -2,7 +2,7 @@
 
 2026 年“策联杯”数学建模精英联赛 A 题项目：锂离子电池快充策略、SOH 退化与循环寿命估计。
 
-当前已完成问题一的数据整理、早期退化特征提取、候选退化模型时间截断验证、80% SOH 寿命估计、不确定性分析及策略级比较。问题二的充电参数效应模型尚未展开。
+当前已完成问题一，以及问题二的策略差异检验、充电参数关系、共线性诊断、SOC 加权应力指标、批次敏感性与稳健性分析。所有问题二结果继续复用问题一的清洗数据、稳健 SOH、早期特征和 quadratic EOL，不另建矛盾口径。
 
 ## 问题一口径
 
@@ -19,10 +19,11 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m pip install -e .
 .\.venv\Scripts\python.exe scripts\run_question1.py --bootstrap-samples 300
+.\.venv\Scripts\python.exe scripts\run_question2.py
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-完整运行约生成：1 份清洗后循环数据、11 张结果表、15 张 320 dpi PNG 和对应的 15 张 SVG 矢量图。随机过程使用固定种子，输出清单见 `outputs/question1/manifest.json`。
+问题二完整运行生成 19 张结果表、15 张 320 dpi PNG 和对应 SVG；随机过程使用固定种子，输出清单见 `outputs/question2/manifest.json`。
 
 ## 目录
 
@@ -34,11 +35,13 @@ celianbei_dbatzrljy/
 ├─ docs/                      # 数据审计、方法、结果与 AI 使用记录
 ├─ src/                       # 模块化清洗、特征、模型、汇总和绘图代码
 ├─ scripts/                   # 可直接运行的流水线
-├─ tests/                     # 数据完整性及问题一关键逻辑测试
+├─ tests/                     # 数据完整性及问题一、问题二关键逻辑测试
 ├─ outputs/question1/tables/  # 问题一结果表
-└─ figures/question1/         # PNG 与 SVG 候选图
+├─ outputs/question2/tables/  # 问题二结果表
+├─ figures/question1/         # 问题一 PNG 与 SVG 候选图
+└─ figures/question2/         # 问题二 PNG 与 SVG 候选图
 ```
 
 ## 重要说明
 
-问题一的长期寿命均为远距离外推结果。残差块 bootstrap 区间仅反映选定模型条件下的不确定性，候选模型之间的差异代表额外的结构不确定性；两者不能混为一谈。策略差异目前只作描述性比较，不作充电参数的因果解释。
+问题一的长期寿命均为远距离外推结果。问题二把 quadratic EOL 与 SOH200、50–200 次稳健斜率交叉核验；`strategy` 与 `dataset_id/NEWSTRUCTURE` 又存在混杂。因此全部参数结论是观察性关系，不作严格因果解释。
