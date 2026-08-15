@@ -1,46 +1,44 @@
 # celianbei_dbatzrljy
 
-2026 年度“策联杯”数学建模精英联赛 A 题项目：锂离子电池快充策略对寿命衰减的影响建模与优化。
+2026 年“策联杯”数学建模精英联赛 A 题项目：锂离子电池快充策略、SOH 退化与循环寿命估计。
 
-仓库当前为比赛初始化基线，包含原始题面、论文规范、原始数据、题目理解、数据质量审计和可复现的完整性检查。远程仓库默认设为私有，以免比赛中的未完成研究和原始材料公开。
+当前已完成问题一的数据整理、早期退化特征提取、候选退化模型时间截断验证、80% SOH 寿命估计、不确定性分析及策略级比较。问题二的充电参数效应模型尚未展开。
 
-## 研究任务
+## 问题一口径
 
-1. 整理电池策略、充电时间、SOH 变化和寿命信息，比较典型长/短寿命策略。
-2. 评估 C1、Q1、C2 及策略对寿命衰减的影响、显著性和可能机制。
-3. 使用前 150 次循环预测测试电池第 151-200 次 SOH，并外推 80% SOH 寿命。
-4. 在已有实验策略及其合理邻域内，求解充电时间与寿命衰减的多目标优化问题。
+- 依据官方补充说明，循环寿命定义为模型预测 SOH 首次达到 0.8 的循环次数；附件没有真实完整寿命标签并不构成数据缺失。
+- 40 块非测试电池用于问题一建模和按时间顺序验证。
+- 9 块 `prediction_test=1` 电池只保留已有观测用于数据检查和可视化，不参与模型拟合、选择或寿命统计。
+- 第 150/200 次循环 SOH 和分段退化速率是早期退化指标，不是真实寿命。
+
+## 复现
+
+```powershell
+cd D:\mywork\code\celianbei_dbatzrljy
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -e .
+.\.venv\Scripts\python.exe scripts\run_question1.py --bootstrap-samples 300
+.\.venv\Scripts\python.exe -m pytest -q
+```
+
+完整运行约生成：1 份清洗后循环数据、11 张结果表、15 张 320 dpi PNG 和对应的 15 张 SVG 矢量图。随机过程使用固定种子，输出清单见 `outputs/question1/manifest.json`。
 
 ## 目录
 
 ```text
 celianbei_dbatzrljy/
-├─ materials/          # 原始题面与竞赛规范（只读）
-├─ data/
-│  ├─ raw/             # 题目提供的原始 CSV（只读）
-│  ├─ interim/         # 可重建的中间数据
-│  └─ processed/       # 可重建的建模数据
-├─ docs/               # 题目理解、数据审计、AI 使用记录
-├─ notebooks/          # 探索性分析；最终结论必须由脚本复现
-├─ src/                # 可复用建模代码
-├─ scripts/            # 可直接运行的流水线脚本
-├─ tests/              # 数据与模型测试
-├─ figures/            # 经审查后用于论文的图
-├─ outputs/            # 可重建输出，默认不纳入 Git
-└─ paper/              # 论文源文件与最终交付物
+├─ materials/                 # 原始题面、论文规范及补充说明（只读）
+├─ data/raw/                  # 题目原始 CSV（只读）
+├─ data/processed/question1/  # 问题一清洗后数据
+├─ docs/                      # 数据审计、方法、结果与 AI 使用记录
+├─ src/                       # 模块化清洗、特征、模型、汇总和绘图代码
+├─ scripts/                   # 可直接运行的流水线
+├─ tests/                     # 数据完整性及问题一关键逻辑测试
+├─ outputs/question1/tables/  # 问题一结果表
+└─ figures/question1/         # PNG 与 SVG 候选图
 ```
 
-## 快速检查
+## 重要说明
 
-```powershell
-python -m pip install -r requirements.txt
-python scripts/audit_data.py
-python -m pytest -q
-```
-
-## 当前重要限制
-
-- 实际附件只给到训练电池第 200 次和测试电池第 150 次循环，且汇总表没有完整寿命标签；80% SOH 寿命需要外推，不能把观测截止循环当成真实寿命。
-- 充电策略参数并非独立设计，策略、批次/结构和温度等因素可能混杂；显著性分析必须采用适合小样本、重复数不均衡和共线性的办法。
-- 原始循环数据存在少量明确异常，详见 `docs/01_data_audit.md`；清洗规则必须基于训练数据制定并保留原值。
-- 竞赛允许使用 AI，但要求公开透明、人工审查并提交详细使用说明。本项目从初始化开始记录 AI 使用。
+问题一的长期寿命均为远距离外推结果。残差块 bootstrap 区间仅反映选定模型条件下的不确定性，候选模型之间的差异代表额外的结构不确定性；两者不能混为一谈。策略差异目前只作描述性比较，不作充电参数的因果解释。
