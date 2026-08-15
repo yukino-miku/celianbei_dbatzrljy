@@ -1,0 +1,8 @@
+﻿model_role,response,model,transform,term,coefficient,residual_sigma,p
+charge_time,mean_chargetime,physical_offset,physical_base_plus_correction,correction_beta_0,0.22370754696331274,0.4007684408166146,
+degradation_proxy,SOH200,stress_loglinear,soh_harm_log,intercept,-20.229599566768485,0.25631904361162106,2.0
+degradation_proxy,SOH200,stress_loglinear,soh_harm_log,stress,0.6288228516326941,0.25631904361162106,2.0
+degradation_proxy,slope50_200,stress_loglinear,degradation_log,intercept,-19.88235218457612,0.22956709238679834,2.0
+degradation_proxy,slope50_200,stress_loglinear,degradation_log,stress,0.5933444476752631,0.22956709238679834,2.0
+degradation_proxy,EOL,stress_loglinear,positive_log,intercept,9.956894124093626,0.08257819024656557,2.0
+degradation_proxy,EOL,stress_loglinear,positive_log,stress,-0.11318568298657558,0.08257819024656557,2.0

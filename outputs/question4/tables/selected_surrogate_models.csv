@@ -1,0 +1,5 @@
+﻿model_role,selected_model,selected_p,selection_basis,primary_use
+charge_time,physical_offset,,physical plus empirical offset: within 5% of best dataset-3 LOSO RMSE and removes mean residual bias,Pareto time objective
+degradation_rate,monotone stress log-linear,2.0,"dataset-3 LOSO across SOH200, slope and EOL; log scale enforces positive degradation",main Pareto degradation objective
+SOH200,monotone stress log-linear,2.0,"observed-response cross-check, not the sole objective",auxiliary Pareto annotation
+EOL,monotone stress log-linear,2.0,conditional quadratic EOL is retained only as uncertainty-sensitive annotation,auxiliary Pareto annotation

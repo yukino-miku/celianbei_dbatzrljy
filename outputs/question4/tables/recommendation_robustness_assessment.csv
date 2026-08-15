@@ -1,0 +1,4 @@
+﻿recommendation_type,n_sensitivity_recommendations,median_normalized_parameter_drift,p90_normalized_parameter_drift,maximum_normalized_parameter_drift,coordinate_stability,overall_recommendation_confidence,confidence_cap_reason
+fast_charge,16,0.0,0.14365039557252246,0.5791763671324873,low,low,model-derived only; six NEWSTRUCTURE strategy points; no experimental validation
+knee,16,0.0,0.05843156373934762,0.08608800614152244,high,moderate,model-derived only; six NEWSTRUCTURE strategy points; no experimental validation
+longevity,16,0.0,0.0,0.05512556633291883,high,moderate,model-derived only; six NEWSTRUCTURE strategy points; no experimental validation
