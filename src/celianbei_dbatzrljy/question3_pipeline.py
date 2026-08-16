@@ -126,7 +126,10 @@ def run_question3(
         figure_stems = sorted(path.stem for path in (figure_root / "png").glob("q3_*.png"))
     manifest = {
         "question": 3, "training_batteries": 40, "test_batteries": 9,
-        "training_input_cycles_in_pseudotest": "1-150", "validated_future_cycles": "151-200",
+        "pseudotest_target_input_cycles": "1-150",
+        "pseudotest_target_validation_only_cycles": "151-200",
+        "pseudotest_peer_training_cycles": "1-200 for all non-target training batteries",
+        "final_model_training_cycles": "1-200 for all 40 non-test batteries",
         "test_input_cycles": "1-150 only", "test_prediction_cycles": "151-200",
         "short_horizon_selected_model": "adaptive_ensemble",
         "selected_eol_scheme": selected_eol_scheme,
@@ -136,7 +139,9 @@ def run_question3(
         "figure_stems_png_and_svg": figure_stems,
         "leakage_guards": [
             "no test row beyond cycle 150 exists or is read",
-            "each training pseudo-test target is excluded from its strategy template",
+            "each training pseudo-test target contributes cycles 1-150 only; its cycles 151-200 are validation labels only",
+            "non-target training batteries may contribute their provided cycles 1-200 to templates and supervised fitting",
+            "each training pseudo-test target is excluded from its strategy template and supervised targets",
             "supervised preprocessing and alpha selection occur inside the outer leave-one-battery-out fold",
             "ensemble pseudo-test weights and interval calibration exclude the target battery",
             "global_id is retained only as existing metadata and never used as a feature or lookup key",

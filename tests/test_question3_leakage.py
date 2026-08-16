@@ -23,6 +23,8 @@ def test_training_pseudotest_boundary_is_150_to_200():
     battery_id = int(data.train["battery_id"].iloc[0])
     group = data.train.loc[data.train["battery_id"] == battery_id]
     template = strategy_template(data.train, group["strategy"].iloc[0], battery_id)
+    assert template["cycle"].min() == 1
+    assert template["cycle"].max() == 200
     predictions = base_curve_predictions(group.loc[group["cycle"] <= 150], template)
     assert set(predictions) == {
         "individual_quadratic", "local_linear", "strategy_template", "template_individual"
@@ -38,6 +40,8 @@ def test_lobo_strategy_template_excludes_target_battery():
     peers = data.train.loc[(data.train["strategy"] == strategy) & (data.train["battery_id"] != target)]
     template = strategy_template(data.train, strategy, target)
     expected = peers.groupby("cycle")["SOH_smooth_robust"].mean().to_numpy()
+    assert peers.groupby("battery_id")["cycle"].max().eq(200).all()
+    assert template["cycle"].tolist() == list(range(1, 201))
     assert np.allclose(template["template_soh"], expected)
 
 
