@@ -1,0 +1,4 @@
+﻿recommendation_type,bootstrap_n,median_parameter_distance,within_one_scaled_unit_fraction,C1_p10,C1_p90,Q1_p10,Q1_p90,C2_p10,C2_p90
+fast_charge,1000,0.0,1.0,5.2,5.2,58.0,58.0,4.55,4.55
+ideal_point_compromise,1000,0.574456264653803,0.579,4.2,5.35,29.0,69.0,4.2,5.55
+longevity,1000,1.4317821063276353,0.375,3.7,5.3,31.0,80.0,4.0,5.9

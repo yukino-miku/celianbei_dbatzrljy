@@ -1,0 +1,8 @@
+﻿diagnostic,value
+cross_battery_d1_d2_correlation,0.024875387487738872
+median_within_battery_bootstrap_d1_d2_correlation,-0.9206221302583739
+either_loss_parameter_boundary_fraction,0.375
+native_cutoff_instability_median,0.11878314843995999
+stable_cutoff_instability_median,0.17993186937519226
+compensation_flag,1.0
+selected_parameterization_R100_A,1.0

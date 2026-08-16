@@ -1,0 +1,2 @@
+﻿model,p,alpha,response,loso_rmse,loso_mae,normalized_loso_rmse,parameterization
+raw_parameters,,10.0,combined,,,1.142349540308106,R100_A

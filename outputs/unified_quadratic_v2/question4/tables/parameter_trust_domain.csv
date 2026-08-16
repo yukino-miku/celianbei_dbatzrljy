@@ -1,0 +1,2 @@
+﻿C1_min,C1_max,Q1_min,Q1_max,C2_min,C2_max,convex_hull_volume,trust_distance_threshold_normalized,n_rectangle_grid_points,n_convex_hull_grid_points,n_trust_region_grid_points,n_main_domain_grid_points,charge_time_model,charge_time_loso_rmse
+3.7,5.6,19.0,80.0,4.0,5.9,15.774999999999974,0.44271108629176653,94302,6340,41926,4413,physical_offset,0.4389179478057454

@@ -1,0 +1,4 @@
+﻿recommendation_type,C1,Q1,C2,nearest_strategy,nearest_strategy_code,nearest_distance_normalized,delta_charge_time_minutes,delta_d1,delta_d2,delta_eol_median,comparison_status
+fast_charge,5.2,58.0,4.55,5_3C_54PER_4C_NEWSTRUCTURE,S5,0.301438246295025,-0.4198009537632199,0.0013041851867220285,-2.893818769362556e-05,-46.854804616491265,model-predicted comparison; not experimental validation
+ideal_point_compromise,5.1,64.0,4.3,5C_67PER_4C_NEWSTRUCTURE,S4,0.17354980747387339,-0.2280300957592356,0.0005399673215972594,-5.277067047209944e-06,-29.120989546081773,model-predicted comparison; not experimental validation
+longevity,5.0,67.0,4.0,5C_67PER_4C_NEWSTRUCTURE,S4,0.0,0.0,0.0,0.0,-7.800799116394273,model-predicted comparison; not experimental validation

@@ -1,0 +1,2 @@
+﻿selected_penalty,selected_short_horizon_model,final_eol_model
+0.0,adaptive_ensemble,same constrained quadratic refit to observed1-150 plus selected forecast151-200

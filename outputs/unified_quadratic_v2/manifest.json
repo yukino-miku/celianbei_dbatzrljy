@@ -1,0 +1,23 @@
+{
+  "pipeline": "unified_quadratic_v2",
+  "random_seed": 20260815,
+  "baseline_preserved": true,
+  "parameterization": "R100_A",
+  "strategy_model": {
+    "model": "raw_parameters",
+    "p": null,
+    "alpha": 10.0,
+    "response": "combined",
+    "loso_rmse": null,
+    "loso_mae": null,
+    "normalized_loso_rmse": 1.142349540308106
+  },
+  "policy_penalty": 0.0,
+  "short_horizon_model": "adaptive_ensemble",
+  "battery_bootstrap_samples": 300,
+  "strategy_bootstrap_samples": 1000,
+  "optimization_bootstrap_samples": 1000,
+  "test_eol_bootstrap_samples": 300,
+  "main_eol_definition": "first n with 1-d1*n/100-d2*(n/100)^2 <= 0.8",
+  "a_treatment": "a=1 main optimization; observed a distribution is sensitivity only"
+}

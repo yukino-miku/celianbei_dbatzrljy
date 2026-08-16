@@ -1,0 +1,8 @@
+﻿comparison,response,same_C1_Q1_C2,S3_value,S9_value,difference,interpretation
+S9_NEWSTRUCTURE_minus_S3_old_structure,d1,True,1.5071518039199298e-09,1.3412521394358792e-08,1.1905369590438863e-08,structure/batch-associated contrast; not a charging-parameter effect
+S9_NEWSTRUCTURE_minus_S3_old_structure,d2,True,0.0035873841211454477,0.000734952614332762,-0.0028524315068126855,structure/batch-associated contrast; not a charging-parameter effect
+S9_NEWSTRUCTURE_minus_S3_old_structure,R100,True,0.0071747697494427,0.0014699053276039126,-0.0057048644218387875,structure/batch-associated contrast; not a charging-parameter effect
+S9_NEWSTRUCTURE_minus_S3_old_structure,A,True,0.0071747682422908955,0.001469905228665524,-0.005704863013625371,structure/batch-associated contrast; not a charging-parameter effect
+S9_NEWSTRUCTURE_minus_S3_old_structure,SOH_200,True,0.9854612775,0.9967894897,0.01132821220000002,structure/batch-associated contrast; not a charging-parameter effect
+S9_NEWSTRUCTURE_minus_S3_old_structure,SOH_slope_50_200_per100,True,-0.009320957118,-0.001999693054,0.007321264064,structure/batch-associated contrast; not a charging-parameter effect
+S9_NEWSTRUCTURE_minus_S3_old_structure,quadratic_eol,True,776.0733376858973,1649.1674024257047,873.0940647398074,structure/batch-associated contrast; not a charging-parameter effect

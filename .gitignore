@@ -59,6 +59,21 @@ outputs/*
 !outputs/question4/manifest.json
 !outputs/question4/tables/
 !outputs/question4/tables/*.csv
+!outputs/unified_quadratic_v2/
+!outputs/unified_quadratic_v2/manifest.json
+!outputs/unified_quadratic_v2/README.md
+!outputs/unified_quadratic_v2/question1/
+!outputs/unified_quadratic_v2/question1/tables/
+!outputs/unified_quadratic_v2/question1/tables/*.csv
+!outputs/unified_quadratic_v2/question2/
+!outputs/unified_quadratic_v2/question2/tables/
+!outputs/unified_quadratic_v2/question2/tables/*.csv
+!outputs/unified_quadratic_v2/question3/
+!outputs/unified_quadratic_v2/question3/tables/
+!outputs/unified_quadratic_v2/question3/tables/*.csv
+!outputs/unified_quadratic_v2/question4/
+!outputs/unified_quadratic_v2/question4/tables/
+!outputs/unified_quadratic_v2/question4/tables/*.csv
 
 # LaTeX intermediate files
 paper/build/

@@ -1,0 +1,11 @@
+﻿model,response,predictor,standardized_beta,conventional_standard_error,n_strategies,interpretation
+raw_parameters_OLS,R100,C1,-1.0138750381113397,0.17715779921882588,6,descriptive direction only; small-sample assumptions are not trusted
+raw_parameters_OLS,R100,Q1,-0.5613132701236755,0.10655379848628341,6,descriptive direction only; small-sample assumptions are not trusted
+raw_parameters_OLS,R100,C2,-0.13503653745942848,0.18681028071709513,6,descriptive direction only; small-sample assumptions are not trusted
+raw_parameters_OLS,A,C1,-0.5091718057727037,0.8866324649385743,6,descriptive direction only; small-sample assumptions are not trusted
+raw_parameters_OLS,A,Q1,-0.8175319082215581,0.5332763074335041,6,descriptive direction only; small-sample assumptions are not trusted
+raw_parameters_OLS,A,C2,-1.2612964358484047,0.9349408290146787,6,descriptive direction only; small-sample assumptions are not trusted
+separate_phase_exposure_OLS_p1,R100,E1,15.674271972808215,3.9688014631050446,6,descriptive direction only; small-sample assumptions are not trusted
+separate_phase_exposure_OLS_p1,R100,E2,16.28007807444686,3.968801463105045,6,descriptive direction only; small-sample assumptions are not trusted
+separate_phase_exposure_OLS_p1,A,E1,-13.262649256757529,9.672669161964654,6,descriptive direction only; small-sample assumptions are not trusted
+separate_phase_exposure_OLS_p1,A,E2,-13.037133102161736,9.672669161964654,6,descriptive direction only; small-sample assumptions are not trusted

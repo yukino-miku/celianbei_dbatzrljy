@@ -1,0 +1,9 @@
+﻿criterion,model_family,value,detail
+Q2_LOSO_combined_normalized_RMSE,raw_parameters,1.142349540308106,p=nan; alpha=10.0
+Q2_LOSO_combined_normalized_RMSE,separate_phase_exposure,1.3015692693505023,p=1.0; alpha=10.0
+Q2_LOSO_combined_normalized_RMSE,summed_stress_benchmark,1.2291797279597467,p=3.0; alpha=10.0
+observed_strategy_EOL_recreation_MAE_a_equals_1,unified_quadratic_parameter_bridge,118.0442321205194,dataset-3 observed strategies
+old_Q4_LOSO_EOL,old_stress_linear,0.2187011616455444,p=2.0
+old_Q4_LOSO_SOH200,old_stress_loglinear,0.2885647740461814,p=3.0
+old_Q4_LOSO_slope50_200,old_stress_loglinear,0.2779680546294181,p=3.0
+observed_strategy_EOL_recreation_MAE_baseline_definition,old_SOC_stress_surrogate,88.11324438855975,predicted_EOL vs eol_point_median; not directly comparable to a=1 EOL

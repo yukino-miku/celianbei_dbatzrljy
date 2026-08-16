@@ -1,0 +1,8 @@
+﻿evidence_channel,classification,detail
+observed_parameter_space,directional_but_limited,six independent dataset-3 strategy points
+LOSO_generalization,unsupported,best normalized RMSE=1.142
+bootstrap_coefficient_sign,unsupported,strategy-first grouped bootstrap
+separate_phase_vs_summed_stress,directional_but_limited,separate phase model is required to outperform the retained benchmark
+early_health_increment,unsupported,median normalized LOBO improvement=-0.160
+exact_parameter_structure_contrast,directional_but_limited,S3/S9 expose unresolved structure/batch variation
+causal_identification,unsupported,observational sparse design with collinearity and batch confounding
